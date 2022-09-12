@@ -31,7 +31,7 @@ function groupDiagnostic(xs: Array<[Uri, Array<Diagnostic>]>): Array<[Uri, Array
 function parseHlintOutput(dir: string, s: Array<Hint>): Array<[Uri, Array<Diagnostic>]> {
   return s.map(hint => {
     const file = Uri.joinPath(Uri.file(dir), hint.file);
-    const range = new Range(hint.startLine, hint.startColumn, hint.endLine, hint.endColumn);
+    const range = new Range(hint.startLine - 1, hint.startColumn - 1, hint.endLine - 1, hint.endColumn - 1);
     const message = hint.hint;
     const severity = {
       'Ignore': DiagnosticSeverity.Information,
