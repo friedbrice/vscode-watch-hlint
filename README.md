@@ -22,9 +22,11 @@ To install this extension, clone the repo and follow these setps.
 npm install
 npm run compile
 npm run package
-npx vsce package
-code --install-extension vscode-watch-hlint-0.0.1.vsix
+npm run package-vsix
+npm run install-vsix
 ```
+
+Then restart VS Code.
 
 ## Credits
 
