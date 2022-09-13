@@ -25,7 +25,7 @@
       "properties": {
         "hlintCommand": {
           "type": "string",
-          "default": null,
+          "default": "",
           "description": "Hlint command (unused at the moment)"
         }
       }
